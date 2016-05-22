@@ -1,0 +1,2 @@
+# YAM
+Yet Another Minesweeper
