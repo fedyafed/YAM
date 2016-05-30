@@ -1,17 +1,17 @@
-package com.github.fedyafed.yam.domains;
+package com.github.fedyafed.yam;
 
-import com.github.fedyafed.yam.core.GameField;
-import com.github.fedyafed.yam.core.GameFieldFactory;
-import com.github.fedyafed.yam.core.Settings;
+import com.github.fedyafed.yam.gameFields.GameField;
+import com.github.fedyafed.yam.gameFields.AbstractGameFieldFactory;
+import com.github.fedyafed.yam.settings.GameFieldSettings;
 
 /**
  * Created by fedya on 22.05.16.
  */
 public class Game {
-    private Settings settings;
+    private GameFieldSettings settings;
     private GameField gameField;
 
-    public Game(Settings settings, GameFieldFactory gameFieldFactory) {
+    public Game(GameFieldSettings settings, AbstractGameFieldFactory gameFieldFactory) {
         this.settings = settings;
         this.gameField = gameFieldFactory.getGameField(settings);
 
@@ -22,7 +22,7 @@ public class Game {
         gameField.initialize();
     }
 
-    public Settings getSettings() {
+    public GameFieldSettings getSettings() {
         return settings;
     }
 

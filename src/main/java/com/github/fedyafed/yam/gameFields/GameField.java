@@ -1,4 +1,4 @@
-package com.github.fedyafed.yam.core;
+package com.github.fedyafed.yam.gameFields;
 
 import com.github.fedyafed.yam.domains.Cell;
 import com.github.fedyafed.yam.domains.Id;
@@ -20,7 +20,7 @@ public interface GameField {
 
     void userMarkCell(Id<Cell> cellId);
 
-    long getRemainToMark();
+    int getRemainToMark();
 
     boolean isGameFinished();
 }

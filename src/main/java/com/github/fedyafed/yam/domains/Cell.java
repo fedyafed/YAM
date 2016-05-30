@@ -10,7 +10,7 @@ public class Cell {
     boolean isOpened;
     boolean isMarked;
     boolean containMine;
-    long nearMinesCount;
+    int nearMinesCount;
 
     public Cell(Id<Cell> id) {
         Objects.requireNonNull(id, "Cell id must be not null.");
@@ -35,11 +35,11 @@ public class Cell {
         this.isOpened = isOpened;
     }
 
-    public long getNearMinesCount() {
+    public int getNearMinesCount() {
         return nearMinesCount;
     }
 
-    public void setNearMinesCount(long nearMinesCount) {
+    public void setNearMinesCount(int nearMinesCount) {
         this.nearMinesCount = nearMinesCount;
     }
 
@@ -59,8 +59,8 @@ public class Cell {
         return containMine;
     }
 
-    public void setContainMine(boolean containMine) {
-        this.containMine = containMine;
+    public void setContainMine() {
+        this.containMine = true;
     }
 
     public void reset() {

@@ -1,6 +1,8 @@
-package com.github.fedyafed.yam.core;
+package com.github.fedyafed.yam.gameFields;
 
 import com.github.fedyafed.yam.domains.Cell;
+import com.github.fedyafed.yam.generators.MinesGenerator;
+import com.github.fedyafed.yam.settings.GameFieldSettings;
 import com.github.fedyafed.yam.domains.Id;
 import com.github.fedyafed.yam.exceptions.MineOpenedException;
 
@@ -14,13 +16,13 @@ import java.util.Map;
  */
 public abstract class AbstractGameField implements GameField {
     protected Map<Id<Cell>, Cell> cells;
-    protected Settings settings;
-    protected long closedFreeCells;
-    protected long remainToMark;
+    protected GameFieldSettings settings;
+    protected int closedFreeCells;
+    protected int remainToMark;
     protected MinesGenerator generator;
     protected boolean generated;
 
-    public AbstractGameField(Settings settings, MinesGenerator generator) {
+    public AbstractGameField(GameFieldSettings settings, MinesGenerator generator) {
         this.settings = settings;
         this.generator = generator;
     }
@@ -95,14 +97,14 @@ public abstract class AbstractGameField implements GameField {
         closedFreeCells--;
     }
 
-    protected long getNearMinesCount(Cell cell) {
-        return this.getNearCells(cell).stream()
+    protected int getNearMinesCount(Cell cell) {
+        return (int) this.getNearCells(cell).stream()
                 .filter(Cell::isContainMine)
                 .count();
     }
 
-    protected long getNearUserMinesCount(Cell cell) {
-        return this.getNearCells(cell).stream()
+    protected int getNearUserMinesCount(Cell cell) {
+        return (int) this.getNearCells(cell).stream()
                 .filter(Cell::isMarked)
                 .count();
     }
@@ -117,7 +119,7 @@ public abstract class AbstractGameField implements GameField {
     }
 
     @Override
-    public long getRemainToMark() {
+    public int getRemainToMark() {
         return remainToMark;
     }
 
