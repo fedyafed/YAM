@@ -22,7 +22,7 @@ public class ProbabilisticMinesGenerator implements MinesGenerator {
         int cellsCount = cells.size();
         Random random = new Random();
         for (Cell cell : cells) {
-            if (random.nextDouble() < ((double)minesCount) / cellsCount) {
+            if (random.nextDouble() < ((double) minesCount) / cellsCount) {
                 cell.setContainMine();
                 minesCount--;
                 if (minesCount == 0) {

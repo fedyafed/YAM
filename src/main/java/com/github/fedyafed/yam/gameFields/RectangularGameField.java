@@ -21,7 +21,7 @@ public class RectangularGameField extends AbstractGameField implements GameField
         cells = IntStream.range(0, settings.getHeight() * settings.getWidth())
                 .boxed()
                 .map((Function<Integer, Id<Cell>>) Id::new)
-                .collect(Collectors.toMap(id->id, Cell::new));
+                .collect(Collectors.toMap(id -> id, Cell::new));
     }
 
     @Override

@@ -11,7 +11,7 @@ public class RectangularGameFieldFactory extends AbstractGameFieldFactory {
     @Override
     public GameField getGameField(GameFieldSettings settings) {
         if (settings instanceof RectangularGameFieldSettings) {
-            return getGameField((RectangularGameFieldSettings)settings);
+            return getGameField((RectangularGameFieldSettings) settings);
         }
         throw new UnsupportedOperationException(String.format("Settings with class %s are not supported.", settings.getClass()));
     }
