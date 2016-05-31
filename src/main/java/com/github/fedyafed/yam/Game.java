@@ -1,7 +1,7 @@
 package com.github.fedyafed.yam;
 
-import com.github.fedyafed.yam.gameFields.GameField;
 import com.github.fedyafed.yam.gameFields.AbstractGameFieldFactory;
+import com.github.fedyafed.yam.gameFields.GameField;
 import com.github.fedyafed.yam.settings.GameFieldSettings;
 
 /**

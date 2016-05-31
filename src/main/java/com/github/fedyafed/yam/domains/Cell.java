@@ -22,17 +22,8 @@ public class Cell {
         return id;
     }
 
-    public void setId(Id<Cell> id) {
-        Objects.requireNonNull(id, "Cell id must be not null.");
-        this.id = id;
-    }
-
     public boolean isOpened() {
         return isOpened;
-    }
-
-    public void setIsOpened(boolean isOpened) {
-        this.isOpened = isOpened;
     }
 
     public int getNearMinesCount() {

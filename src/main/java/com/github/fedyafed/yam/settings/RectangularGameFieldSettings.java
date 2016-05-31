@@ -12,8 +12,8 @@ public class RectangularGameFieldSettings extends GameFieldSettings {
         this.width = width;
         this.height = height;
 
-        if (minesCount > height * width) {
-            throw new IllegalArgumentException(String.format("Too many mines %d for field %dx%d", minesCount, height, width));
+        if (minesCount > width * height) {
+            throw new IllegalArgumentException(String.format("Too many mines %d for field %dx%d", minesCount, width, height));
         }
     }
 

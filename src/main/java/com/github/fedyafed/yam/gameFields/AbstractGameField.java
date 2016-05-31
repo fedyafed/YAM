@@ -1,10 +1,10 @@
 package com.github.fedyafed.yam.gameFields;
 
 import com.github.fedyafed.yam.domains.Cell;
-import com.github.fedyafed.yam.generators.MinesGenerator;
-import com.github.fedyafed.yam.settings.GameFieldSettings;
 import com.github.fedyafed.yam.domains.Id;
 import com.github.fedyafed.yam.exceptions.MineOpenedException;
+import com.github.fedyafed.yam.generators.MinesGenerator;
+import com.github.fedyafed.yam.settings.GameFieldSettings;
 
 import java.util.Collection;
 import java.util.Collections;

@@ -1,7 +1,7 @@
 package com.github.fedyafed.yam.generators;
 
-import com.github.fedyafed.yam.settings.GameFieldSettings;
 import com.github.fedyafed.yam.domains.Cell;
+import com.github.fedyafed.yam.settings.GameFieldSettings;
 
 import java.util.ArrayList;
 import java.util.Collection;

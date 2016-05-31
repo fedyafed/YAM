@@ -1,8 +1,8 @@
 package com.github.fedyafed.yam.gameFields;
 
-import com.github.fedyafed.yam.generators.MinesGenerator;
 import com.github.fedyafed.yam.domains.Cell;
 import com.github.fedyafed.yam.domains.Id;
+import com.github.fedyafed.yam.generators.MinesGenerator;
 import com.github.fedyafed.yam.settings.RectangularGameFieldSettings;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class RectangularGameField extends AbstractGameField implements GameField
     public RectangularGameField(RectangularGameFieldSettings settings, MinesGenerator generator) {
         super(settings, generator);
         this.settings = settings;
-        cells = IntStream.range(0, settings.getHeight() * settings.getWidth())
+        cells = IntStream.range(0, settings.getWidth() * settings.getHeight())
                 .boxed()
                 .map((Function<Integer, Id<Cell>>) Id::new)
                 .collect(Collectors.toMap(id -> id, Cell::new));
@@ -27,8 +27,8 @@ public class RectangularGameField extends AbstractGameField implements GameField
     @Override
     protected List<Cell> getNearCells(Cell cell) {
         int id = cell.getId().getId();
-        int row = id / settings.getHeight();
-        int column = id % settings.getHeight();
+        int row = id / settings.getWidth();
+        int column = id % settings.getWidth();
         List<Cell> nearCells = new ArrayList<>();
         nearCells.add(getCell(row - 1, column - 1));
         nearCells.add(getCell(row, column - 1));
@@ -43,11 +43,11 @@ public class RectangularGameField extends AbstractGameField implements GameField
     }
 
     protected Cell getCell(int row, int column) {
-        if (row < 0 || row >= settings.getWidth() ||
-                column < 0 || column > settings.getHeight()) {
+        if (row < 0 || row >= settings.getHeight() ||
+                column < 0 || column > settings.getWidth()) {
             return null;
         }
-        Id<Cell> id = new Id<>(row * settings.getHeight() + column);
+        Id<Cell> id = new Id<>(row * settings.getWidth() + column);
         return cells.get(id);
     }
 }

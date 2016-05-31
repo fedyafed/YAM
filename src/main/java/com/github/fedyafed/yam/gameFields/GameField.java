@@ -12,11 +12,11 @@ import java.util.Collection;
 public interface GameField {
     Collection<? extends Cell> getCells();
 
+    void initialize();
+
     void userOpenCell(Id<Cell> cellId) throws MineOpenedException;
 
     void userOpenNearCell(Id<Cell> cellId) throws MineOpenedException;
-
-    void initialize();
 
     void userMarkCell(Id<Cell> cellId);
 
