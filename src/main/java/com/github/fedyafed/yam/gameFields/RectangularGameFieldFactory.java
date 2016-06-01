@@ -7,7 +7,7 @@ import com.github.fedyafed.yam.settings.RectangularGameFieldSettings;
 /**
  * Created by fedya on 31.05.16.
  */
-public class RectangularGameFieldFactory extends AbstractGameFieldFactory {
+public class RectangularGameFieldFactory implements GameFieldFactory {
     @Override
     public GameField getGameField(GameFieldSettings settings) {
         if (settings instanceof RectangularGameFieldSettings) {

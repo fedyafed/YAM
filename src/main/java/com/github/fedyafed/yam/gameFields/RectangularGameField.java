@@ -44,7 +44,7 @@ public class RectangularGameField extends AbstractGameField implements GameField
 
     protected Cell getCell(int row, int column) {
         if (row < 0 || row >= settings.getHeight() ||
-                column < 0 || column > settings.getWidth()) {
+                column < 0 || column >= settings.getWidth()) {
             return null;
         }
         Id<Cell> id = new Id<>(row * settings.getWidth() + column);
