@@ -8,3 +8,7 @@ target
 # Idea files
 .idea
 *.iml
+
+# Maven release plugin files
+release.properties
+pom.xml.releaseBackup
