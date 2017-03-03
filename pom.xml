@@ -4,7 +4,7 @@
 
     <groupId>com.github.fedyafed</groupId>
     <artifactId>yam</artifactId>
-    <version>0.4-SNAPSHOT</version>
+    <version>0.4</version>
     <packaging>jar</packaging>
 
     <name>YAM</name>
@@ -36,7 +36,7 @@
         <url>https://github.com/fedyafed/YAM/</url>
         <connection>scm:git:git://github.com/fedyafed/YAM.git</connection>
         <developerConnection>scm:git:git@github.com:fedyafed/YAM.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>0.4</tag>
     </scm>
     <distributionManagement>
         <site>
