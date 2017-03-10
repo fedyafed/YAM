@@ -56,7 +56,12 @@
         <java.version>1.8</java.version>
         <github.host>github.com/fedyafed/YAM</github.host>
     </properties>
-
+<!--    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>-->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -64,6 +69,12 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+<!--        <dependency>
+            <groupId>com.github.fedyafed</groupId>
+            <artifactId>yam</artifactId>
+            <version>0.4</version>
+        </dependency>-->
     </dependencies>
 
     <build>

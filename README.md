@@ -1,5 +1,7 @@
 # YAM - Yet Another Minesweeper
 
+[![](https://jitpack.io/v/fedyafed/YAM.svg)](https://jitpack.io/#fedyafed/YAM)
+
 ## Goals
 ### Implement basic logic of minesweeper
 1. Game field may have non-grid view (triangular for ex.)
